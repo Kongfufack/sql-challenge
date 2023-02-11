@@ -1,0 +1,34 @@
+Deparments
+-
+dept_no VARCHAR PK
+dept_name VACHAR
+
+Dept_emp
+-
+emp_no VARCHAR PK
+dept_no VACHAR FK >- Deparments.dept_no
+
+Dept_manager
+-
+dept_no VACHAR FK >- Deparments.dept_no
+emp_no VACHAR FK >- Employees.emp_no
+
+Employees
+-
+emp_no INT FK >- Dept_emp.emp_no
+emp_title_id VACHAR FK >- Title.title_id
+birth_date DATE 
+first_name VACHAR
+last_name VACHAR
+sex VACHAR
+hire_date DATE
+
+Salaries
+-
+emp_no INT FK >- Dept_emp.emp_no
+salary
+
+Title
+-
+title_id VACHAR PK 
+title
